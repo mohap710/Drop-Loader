@@ -1,0 +1,54 @@
+body {
+  font-family: cursive;
+  font-weight: 800;
+  display: flex;
+  height: 95vh;
+  background: #000000;
+}
+
+.loader {
+  position: relative;
+  width: clamp(300px, 70%, 500px);
+  min-height: 50vh;
+  margin: auto;
+  filter: blur(10px) contrast(20);
+  background-color: #000000;
+}
+.drop1,
+.drop2 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.drop1 {
+    z-index: 1;
+  left: 10%;
+  background-color: rgb(204, 23, 23);
+  animation: leftToRight 1s ease-in-out infinite alternate;
+}
+.drop2 {
+  right: 10%;
+  background-color: rgb(212, 216, 1);
+  animation: rightToLeft 1s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes leftToRight {
+  0% {
+    left: 10%;
+  }
+  100% {
+    left: 45%;
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    right: 10%;
+  }
+  100% {
+    right: 45%;
+  }
+}
